@@ -35,8 +35,8 @@ const Signup = ()=>{
         if(isValid(user_data)){
             try{
                 setIsSigningUp(true);
-                const response = await fetch('http://localhost:80/api/auth/signup', {
-                  // const response = await fetch('https://chatinit-backend.onrender.com/api/auth/signup', {
+                // const response = await fetch('http://localhost:80/api/auth/signup', {
+                  const response = await fetch('https://chatinit-backend.onrender.com/api/auth/signup', {
                   method: 'POST',
                   body: user_data
                 });

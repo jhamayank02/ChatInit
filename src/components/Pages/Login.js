@@ -30,8 +30,8 @@ const formSubmitHandler = async (e)=>{
     if(isValid(user_data)){
       try{
         setIsLoggingIn(true);
-        const response = await fetch('http://localhost:80/api/auth/login', {
-        // const response = await fetch('https://chatinit-backend.onrender.com/api/auth/login', {
+        // const response = await fetch('http://localhost:80/api/auth/login', {
+        const response = await fetch('https://chatinit-backend.onrender.com/api/auth/login', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
