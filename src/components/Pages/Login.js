@@ -33,6 +33,7 @@ const formSubmitHandler = async (e)=>{
         // const response = await fetch('http://localhost:80/api/auth/login', {
         const response = await fetch('https://chatinit-backend.onrender.com/api/auth/login', {
           method: 'POST',
+          mode: 'cors',
           headers: {
             'Content-Type': 'application/json'
           },

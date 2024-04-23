@@ -38,6 +38,7 @@ const Signup = ()=>{
                 // const response = await fetch('http://localhost:80/api/auth/signup', {
                   const response = await fetch('https://chatinit-backend.onrender.com/api/auth/signup', {
                   method: 'POST',
+                  mode: 'cors',
                   body: user_data
                 });
         
