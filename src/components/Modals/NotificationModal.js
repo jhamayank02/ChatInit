@@ -1,15 +1,15 @@
 import { useContext, useEffect, useState } from "react";
-import Modal from "../utils/Modal";
+import Modal from "../../utils/Modal";
 import { useCookies } from "react-cookie";
 import { toast } from 'react-toastify';
-import { useAcceptFriendRequestMutation, useRejectFriendRequestMutation, useRequestsReceivedByMeQuery } from "../redux/api/api";
-import Avatar from "./Avatar";
-import { SocketContext } from "../socket";
-import { NEW_REQUEST, REFETCH_REQUESTS } from "../constants/events";
+import { useAcceptFriendRequestMutation, useRejectFriendRequestMutation, useRequestsReceivedByMeQuery } from "../../redux/api/api";
+import Avatar from "../../ui/Avatar";
+import { SocketContext } from "../../socket";
+import { NEW_REQUEST, REFETCH_REQUESTS } from "../../constants/events";
 import { useDispatch } from "react-redux";
-import { resetNotificationCount } from "../redux/reducers/notification";
-import RequestSkeleton from "../ui/skeletons/RequestSkeleton";
-import { closeNotificationModal } from "../redux/reducers/misc";
+import { resetNotificationCount } from "../../redux/reducers/notification";
+import RequestSkeleton from "../../ui/skeletons/RequestSkeleton";
+import { closeNotificationModal } from "../../redux/reducers/misc";
 
 const NotificationModal = () => {
     const [isLoading, setIsLoading] = useState(false);

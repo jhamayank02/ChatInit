@@ -1,21 +1,21 @@
 import React, { useCallback, useContext, useEffect, useRef, useState } from 'react';
-import Avatar from './Avatar';
-import { SocketContext } from '../socket';
-import { CHAT_JOINED, CHAT_LEFT, NEW_ATTACHMENT, NEW_MESSAGE, REFETCH_MESSAGES, START_TYPING, STOP_TYPING } from '../constants/events';
+import Avatar from '../../ui/Avatar';
+import { SocketContext } from '../../socket';
+import { CHAT_JOINED, CHAT_LEFT, NEW_ATTACHMENT, NEW_MESSAGE, REFETCH_MESSAGES, START_TYPING, STOP_TYPING } from '../../constants/events';
 import { useSelector } from 'react-redux';
-import { useGetMessagesMutation, useSendAttachmentMutation } from '../redux/api/api';
+import { useGetMessagesMutation, useSendAttachmentMutation } from '../../redux/api/api';
 import { toast } from 'react-toastify';
-import { removeNewMessagesAlert } from '../redux/reducers/notification';
+import { removeNewMessagesAlert } from '../../redux/reducers/notification';
 import { useDispatch } from 'react-redux';
-import MessageSkeleton from '../ui/skeletons/MessageSkeleton';
+import MessageSkeleton from '../../ui/skeletons/MessageSkeleton';
 import moment from 'moment';
-import { openAddMembersModal, openGroupDetailsModal, openUserDetailsModal } from '../redux/reducers/misc';
+import { openAddMembersModal, openGroupDetailsModal, openUserDetailsModal } from '../../redux/reducers/misc';
 import InfiniteScroll from 'react-infinite-scroll-component';
-import Loading from '../utils/Loading';
-import ClickMenu from '../utils/ClickMenu';
-import MessageCard from './MessageCard';
-import RealtimeMessageCard from './RealtimeMessageCard';
-import TypingAnimation from '../utils/TypingAnimation';
+import Loading from '../../utils/Loading';
+import ClickMenu from '../../utils/ClickMenu';
+import MessageCard from '../../ui/MessageCard';
+import RealtimeMessageCard from '../../ui/RealtimeMessageCard';
+import TypingAnimation from '../../utils/TypingAnimation';
 
 const ChatArea = ({ currentChat, setCurrentChat }) => {
 

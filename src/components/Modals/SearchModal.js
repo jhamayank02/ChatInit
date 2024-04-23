@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import Modal from '../utils/Modal';
+import Modal from '../../utils/Modal';
 import { useDispatch } from 'react-redux';
-import { closeSearchModal } from '../redux/reducers/misc';
-import {useLazySearchUserQuery, useSendFriendRequestMutation} from '../redux/api/api';
+import { closeSearchModal } from '../../redux/reducers/misc';
+import {useLazySearchUserQuery, useSendFriendRequestMutation} from '../../redux/api/api';
 import { toast } from 'react-toastify';
-import Avatar from './Avatar';
-import SearchResultsSkeleton from '../ui/skeletons/SearchResultsSkeleton';
+import Avatar from '../../ui/Avatar';
+import SearchResultsSkeleton from '../../ui/skeletons/SearchResultsSkeleton';
 
 const SearchModal = () => {
 

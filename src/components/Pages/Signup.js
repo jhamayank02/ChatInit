@@ -2,7 +2,7 @@ import { useContext, useRef, useState } from "react";
 import { Form, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
-import { userExists } from "../redux/reducers/auth";
+import { userExists } from "../../redux/reducers/auth";
 import { useCookies } from "react-cookie";
 
 const Signup = ()=>{

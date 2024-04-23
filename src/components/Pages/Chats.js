@@ -1,18 +1,18 @@
 import React, { useContext, useEffect, useState } from 'react';
-import ChatAddressCard from './ChatAddressCard';
-import Avatar from './Avatar';
+import ChatAddressCard from '../../ui/ChatAddressCard';
+import Avatar from '../../ui/Avatar';
 import { useCookies } from "react-cookie";
 import { toast } from 'react-toastify';
-import { useLazySearchUserQuery, useSendFriendRequestMutation, useMyChatsQuery, useLazyRequestsSentByMeQuery, useRequestsSentByMeQuery, useRequestsReceivedByMeQuery, useAcceptFriendRequestMutation, useRejectFriendRequestMutation } from '../redux/api/api';
-import ChatAddressCardSkeleton from '../ui/skeletons/ChatAddressCardSkeleton';
+import { useLazySearchUserQuery, useSendFriendRequestMutation, useMyChatsQuery, useLazyRequestsSentByMeQuery, useRequestsSentByMeQuery, useRequestsReceivedByMeQuery, useAcceptFriendRequestMutation, useRejectFriendRequestMutation } from '../../redux/api/api';
+import ChatAddressCardSkeleton from '../../ui/skeletons/ChatAddressCardSkeleton';
 import Skeleton from 'react-loading-skeleton';
-import { NEW_MESSAGE_ALERT, NEW_REQUEST, ONLINE_USERS, REFETCH_CHATS } from '../constants/events';
-import { SocketContext } from '../socket';
+import { NEW_MESSAGE_ALERT, NEW_REQUEST, ONLINE_USERS, REFETCH_CHATS } from '../../constants/events';
+import { SocketContext } from '../../socket';
 import { useDispatch, useSelector } from "react-redux";
-import { incrementNotificationCount, setNewMessagesAlert } from '../redux/reducers/notification';
+import { incrementNotificationCount, setNewMessagesAlert } from '../../redux/reducers/notification';
 import { useCallback } from 'react';
-import { getOrSaveFromLocalStorage } from '../lib/features';
-import { openCreateGroupModal, openSearchModal } from '../redux/reducers/misc';
+import { getOrSaveFromLocalStorage } from '../../lib/features';
+import { openCreateGroupModal, openSearchModal } from '../../redux/reducers/misc';
 
 const fetchUserData = async (uid) => {
 

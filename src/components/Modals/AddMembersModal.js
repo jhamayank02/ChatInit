@@ -1,13 +1,13 @@
 import { useDispatch } from "react-redux";
-import Modal from "../utils/Modal";
-import { closeAddMembersModal } from "../redux/reducers/misc";
-import { useAddMembersInTheGroupMutation, useGetMyAvailableFriendsMutation } from "../redux/api/api";
+import Modal from "../../utils/Modal";
+import { closeAddMembersModal } from "../../redux/reducers/misc";
+import { useAddMembersInTheGroupMutation, useGetMyAvailableFriendsMutation } from "../../redux/api/api";
 import { toast } from "react-toastify";
 import { useState, useEffect, useRef } from 'react';
-import Avatar from "./Avatar";
-import MembersLoadingSkeleton from "../ui/skeletons/MembersLoadingSkeleton";
+import Avatar from "../../ui/Avatar";
+import MembersLoadingSkeleton from "../../ui/skeletons/MembersLoadingSkeleton";
 
-const AddMembers = ({ currentChat }) => {
+const AddMembersModal = ({ currentChat }) => {
   const dispatch = useDispatch();
 
   const [getMyAvailableFriends] = useGetMyAvailableFriendsMutation();
@@ -99,4 +99,4 @@ const AddMembers = ({ currentChat }) => {
   )
 }
 
-export default AddMembers;
+export default AddMembersModal;

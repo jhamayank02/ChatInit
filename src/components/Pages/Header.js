@@ -1,12 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
-import { openNotificationModal, openMyDetailsModal } from "../redux/reducers/misc";
-import ClickMenu from '../utils/ClickMenu';
+import { openNotificationModal, openMyDetailsModal } from "../../redux/reducers/misc";
+import ClickMenu from '../../utils/ClickMenu';
 import { useState } from "react";
 import moment from "moment";
-import { useDeleteAccountMutation } from "../redux/api/api";
+import { useDeleteAccountMutation } from "../../redux/api/api";
 import { toast } from "react-toastify";
 import { useCookies } from "react-cookie";
-import { userNotExists } from "../redux/reducers/auth";
+import { userNotExists } from "../../redux/reducers/auth";
 import { useNavigate } from "react-router-dom";
 
 const Header = ({ logoutHandler }) => {

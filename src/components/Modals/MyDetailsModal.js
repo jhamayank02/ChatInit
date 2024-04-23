@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
-import Modal from "../utils/Modal";
-import { closeMyDetailsModal } from "../redux/reducers/misc";
+import Modal from "../../utils/Modal";
+import { closeMyDetailsModal } from "../../redux/reducers/misc";
 import moment from "moment";
 
 const MyDetailsModal = () => {

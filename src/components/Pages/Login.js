@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { userExists } from '../redux/reducers/auth';
+import { userExists } from '../../redux/reducers/auth';
 import {useDispatch} from 'react-redux';
 import { useCookies } from 'react-cookie';
 

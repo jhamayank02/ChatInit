@@ -1,10 +1,10 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { useOtpVerificationMutation, useResendOTPMutation } from "../redux/api/api";
+import { useOtpVerificationMutation, useResendOTPMutation } from "../../redux/api/api";
 import { useCookies } from 'react-cookie';
 import { useDispatch } from "react-redux";
-import { userExists } from "../redux/reducers/auth";
+import { userExists } from "../../redux/reducers/auth";
 
 let currentOtpIndex = 0;
 

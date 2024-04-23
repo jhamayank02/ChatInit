@@ -1,14 +1,14 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useState, useEffect, useContext } from 'react';
-import Modal from '../utils/Modal';
-import { closeGroupDetailsModal } from '../redux/reducers/misc';
-import { useGetGroupDetailsMutation, useLeaveGroupMutation, useRemoveFromGroupMutation, useDeleteGroupMutation } from '../redux/api/api';
+import Modal from '../../utils/Modal';
+import { closeGroupDetailsModal } from '../../redux/reducers/misc';
+import { useGetGroupDetailsMutation, useLeaveGroupMutation, useRemoveFromGroupMutation, useDeleteGroupMutation } from '../../redux/api/api';
 import { toast } from 'react-toastify';
-import Avatar from './Avatar';
+import Avatar from '../../ui/Avatar';
 import moment from 'moment';
-import DetailsModalSkeleton from '../ui/skeletons/DetailsModalSkeleton';
-import { SocketContext } from '../socket';
-import { REFETCH_MEMBERS } from '../constants/events';
+import DetailsModalSkeleton from '../../ui/skeletons/DetailsModalSkeleton';
+import { SocketContext } from '../../socket';
+import { REFETCH_MEMBERS } from '../../constants/events';
 
 const GroupDetailsModal = ({currentChat, setCurrentChat}) => {
 

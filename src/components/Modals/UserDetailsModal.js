@@ -1,12 +1,12 @@
-import Modal from "../utils/Modal";
+import Modal from "../../utils/Modal";
 import { useContext, useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 import { useDispatch, useSelector } from "react-redux";
-import { closeUserDetailsModal } from '../redux/reducers/misc';
+import { closeUserDetailsModal } from '../../redux/reducers/misc';
 import moment from "moment";
-import { useGetUserDetailsMutation } from "../redux/api/api";
+import { useGetUserDetailsMutation } from "../../redux/api/api";
 import { toast } from "react-toastify";
-import DetailsModalSkeleton from "../ui/skeletons/DetailsModalSkeleton";
+import DetailsModalSkeleton from "../../ui/skeletons/DetailsModalSkeleton";
 
 const UserDetailsModal = ({currentChat}) => {
     const dispatch = useDispatch();

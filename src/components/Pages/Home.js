@@ -1,11 +1,11 @@
 import {useContext, useEffect, useState} from 'react';
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
-import Loading from "../utils/Loading";
+import Loading from "../../utils/Loading";
 import { toast } from 'react-toastify';
 import {useDispatch} from 'react-redux';
-import { userExists } from '../redux/reducers/auth';
-import { useLazyCheckIsLoggedInQuery } from '../redux/api/api';
+import { userExists } from '../../redux/reducers/auth';
+import { useLazyCheckIsLoggedInQuery } from '../../redux/api/api';
 
 const Home = ()=>{
     

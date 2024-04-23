@@ -1,11 +1,11 @@
-import Home from './components/Home';
+import Home from './components/Pages/Home';
 import { ToastContainer } from 'react-toastify';
 import {HashRouter, Routes, Route} from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
-import ChatHome from './components/ChatHome';
-import OTPScreen from './components/OTPScreen';
-import Signup from './components/Signup';
-import Login from './components/Login';
+import ChatHome from './components/Pages/ChatHome';
+import OTPScreen from './components/Pages/OTPScreen';
+import Signup from './components/Pages/Signup';
+import Login from './components/Pages/Login';
 import { CookiesProvider } from 'react-cookie';
 import { SocketProvider } from './socket';
 

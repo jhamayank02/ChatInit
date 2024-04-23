@@ -1,11 +1,11 @@
 import { useRef } from "react";
-import { useCreateNewGroupMutation, useGetMyFriendsQuery } from "../redux/api/api";
-import Modal from "../utils/Modal";
-import Avatar from "./Avatar";
+import { useCreateNewGroupMutation, useGetMyFriendsQuery } from "../../redux/api/api";
+import Modal from "../../utils/Modal";
+import Avatar from "../../ui/Avatar";
 import { toast } from 'react-toastify';
-import { closeCreateGroupModal } from "../redux/reducers/misc";
+import { closeCreateGroupModal } from "../../redux/reducers/misc";
 import { useDispatch } from "react-redux";
-import MembersLoadingSkeleton from "../ui/skeletons/MembersLoadingSkeleton";
+import MembersLoadingSkeleton from "../../ui/skeletons/MembersLoadingSkeleton";
 
 const StartGroupChatModal = () => {
 
